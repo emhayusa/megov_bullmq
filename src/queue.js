@@ -1,7 +1,7 @@
 const { Queue } = require("bullmq");
 
 const CONNECTOR = {
-  host: "localhost",
+  host: "172.16.238.1",
   port: 6379,
 };
 

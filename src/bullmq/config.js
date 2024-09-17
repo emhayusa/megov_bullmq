@@ -1,5 +1,5 @@
 const CONNECTOR = {
-  host: "localhost",
+  host: "redis_techlab",
   port: 6379,
 };
 

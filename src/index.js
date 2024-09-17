@@ -64,8 +64,9 @@ app.post("/send", async (req, res) => {
     return res.status(400).json({ error: "Number and message are required" });
   }
   //await sendQueue.add("sendMessage", { number, message });
-  await sendQueue.add("sendMessage", { number, message });
-  res.status(200).json({ message: "Message queued successfully" });
+  //await sendQueue.add("sendMessage", { number, message });
+  await sendMessage(number, message);
+  res.status(200).json({ message: "Message send successfully" });
   /*
   const data = {
     jobName: "sendWa",
@@ -123,10 +124,10 @@ Semoga lelah kita menjadi ibadah ya! Terimakasih atas kontribusi dan kerja keras
 */
 
 // Start the worker
-new Worker("sendMessageQueue", async (job) => {
-  const { number, message } = job.data;
-  await sendMessage(number, message);
-});
+//new Worker("sendMessageQueue", async (job) => {
+//  const { number, message } = job.data;
+//  await sendMessage(number, message);
+//});
 
 app.listen(PORT, async function onListen() {
   console.log(`Server is up and running on port ${PORT}`);
