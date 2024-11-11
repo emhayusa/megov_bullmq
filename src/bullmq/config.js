@@ -1,6 +1,7 @@
 const CONNECTOR = {
-  host: "redis_techlab",
-  port: 6379,
+  host: "redis",
+  port: 6379
+  password: "red!sPassw0rd"
 };
 
 const DEFAULT_REMOVE_CONFIG = {

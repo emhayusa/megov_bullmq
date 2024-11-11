@@ -1,8 +1,9 @@
 const { Queue } = require("bullmq");
 
 const CONNECTOR = {
-  host: "172.16.238.1",
+  host: "redis",
   port: 6379,
+  password: "red!sPassw0rd"
 };
 
 const sendQueue = new Queue("sendMessageQueue", {
